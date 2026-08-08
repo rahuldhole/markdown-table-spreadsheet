@@ -37,10 +37,9 @@ export function parseMarkdownToMatrix(mdText: string): { headers: string[]; rows
     }
 
     if (headers.length === 0) {
-      headers = ['Column 1', 'Column 2', 'Column 3'];
+      headers = ['Column 1', 'Column 2'];
       rows = [
-        ['', '', ''],
-        ['', '', ''],
+        ['', '']
       ];
     }
 

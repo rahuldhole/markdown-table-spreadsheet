@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*
+ * Prevent Tailwind's preflight/reset from interfering with Univer's
+ * internal canvas rendering and UI elements. Univer manages its own
+ * styles for the spreadsheet canvas, inputs, and overlays.
+ */
+.univer-container *,
+.univer-container *::before,
+.univer-container *::after {
+  box-sizing: initial;
+}
+
+.univer-container canvas {
+  display: initial;
+}
+
+.univer-container input,
+.univer-container textarea,
+.univer-container select,
+.univer-container button {
+  background-color: initial;
+  border-radius: initial;
+  opacity: initial;
+  color: initial;
+}
